@@ -5,25 +5,35 @@
 /**
  * Set up a decent box model on the root element
  */
-html {
-  box-sizing: border-box;
-}
 
+ /// We dont need this since this is provided by Bootstrap
+/// html {
+  /// box-sizing: border-box;
+/// }
+
+body {
+  background-color: $background-body;
+  font-family: $primary-font;
+  // font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  color: $text-color;
+}
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
  * Since `*` has a specificity of 0, it does not override the `html` value
  * making all elements inheriting from the root box-sizing value
  * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
  */
-*, *::before, *::after {
-  box-sizing: inherit;
-} 
+////*, *::before, *::after {
+  ///box-sizing: inherit;
+/// }
 
 /**
  * Basic styles for links
  */
 a {
-  color: $brand-color;
+  color: $primary-color;
   text-decoration: none;
 
   @include on-event {

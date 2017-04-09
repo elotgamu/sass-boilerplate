@@ -32,3 +32,37 @@
   }
 }
 
+/// flex setup for navigation elements
+/// apply this on sm view(768px and up)
+
+@mixin flex-navigation {
+  display: flex;
+  padding-left: 0;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+@mixin flex-child {
+  display: block;
+  flex: 1 0 auto;
+}
+
+
+/// mixins for color customization
+@mixin primary-color {
+  color: $primary-color;
+}
+@mixin secondary-color {
+  color: $secondary-color;
+}
+@mixin third-color {
+  color: $third-color;
+}
+
+///mixins for using fonts family
+@mixin primary-font {
+  font-family: $primary-font;
+}
+@mixin secondary-font {
+  font-family: $secondary-font;
+}

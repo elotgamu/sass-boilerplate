@@ -1,0 +1,111 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles of search box and parent items
+// -----------------------------------------------------------------------------
+.search-toggle-button-mobile {
+  border-radius: 0px;
+  color: #fff;
+  margin-right: 0px;
+  width: inherit;
+  margin-top: -30px;
+  margin-right: 125px;
+  position: absolute;
+  top: 110px;
+  right: 5px;
+  z-index: 3;
+}
+#SearchMobile {
+  background: url('../img/header-turnaround.jpg') top center no-repeat;
+  // background-size: contain;
+  background-position: 64% 13%;
+  margin: 0 auto;
+
+}
+.search-home {
+  // background-size: cover;
+  // width: 100%;
+  // padding: 30px 0;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.search-banner {
+  h3 {
+    color: $primary-color;
+    font-weight: bold;
+  }
+  a.view-search {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+    color: $white;
+
+  }
+}
+#search-bar {
+  width: 100%;
+  .search-bar-element {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 15px;
+    input {
+      border-radius: 0;
+    }
+    /*&:last-child {
+      padding-bottom: 0;
+    }*/
+  }
+  a.search-btn {
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  /// This is a fix for element not using its full space
+  #SearchMobile {
+    float: none;
+    background-size: cover;
+    padding: 0;
+  }
+  .search-home {
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px 0;
+  }
+  .search-banner {
+    float: left;
+    /// border: 1px solid red;
+    a.view-search {
+      text-shadow: 5px 2px 13px rgba(0,0,0, 0.8);
+      /// border: 1px solid red;
+      margin-top: 15px;
+      margin-bottom: 0;
+      text-align: center;
+    }
+  }
+  #search-bar {
+    // border: 1px solid red;
+    display: table;
+    .search-bar-element {
+      display: table-cell;
+      width: 50%;
+      /// border: 1px solid red;
+      padding-right: 15px;
+      padding-bottom: 0;
+      &:last-child {
+        padding-right: 0;
+        vertical-align: bottom;
+      }
+      label {
+        color: $primary-color;
+      }
+    }
+  }
+}
+@media (min-width:992px) {
+  .search-banner {
+    h3 {
+      /// border: 1px solid red;
+      margin-bottom: 0;
+      text-align: right;
+      margin-top: 12%;
+    }
+  }
+}

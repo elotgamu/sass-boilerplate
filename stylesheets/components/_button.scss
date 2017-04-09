@@ -1,3 +1,38 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+.btn-general, .btn-general:focus{
+  background-color: $btncolor;
+  color: $third-color;
+  border: none;
+  text-transform: uppercase;
+  // padding: 10px;
+  padding: 6px 15px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 0;
+  border: none;
+  &:hover {
+    background-color: $secondary-color;
+    color: $third-color;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+  }
+}
+.btn-join, .btn-join:focus {
+  @extend .btn-general;
+  color: $white;
+  background-color: transparent;
+  border: 1px solid #ddd;
+  &:hover {
+    border: 1px solid #ddd;
+    color: $white;
+  }
+
+}
+.primary-button,
+#edit-preference-update-btn,
+#subscription-save-btn {
+  @extend .btn-general;
+}

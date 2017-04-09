@@ -1,3 +1,133 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+.top-social {
+
+}
+.top-navbar {
+
+}
+.table-top-xs {
+
+}
+.logo-link-top {
+	// max-width: 160px;
+	// padding: 12px 0 10px;
+
+	img {
+		width: 100%;
+		max-width: 140px;
+    margin-top: 15px;
+		// padding: 12px 0 10px;
+	}
+}
+
+.navbar-default {
+	background-color: $primary-color;
+	border-color: inherit;
+  margin-bottom: 0;
+	.navbar-toggle, .navbar-toggle:focus {
+		/// @extends .btn-general;
+		float: none;
+		display: inline-block;
+		border-radius: 0;
+		padding: 10px;
+		margin-left: 15px;
+		background-color: rgba(4,43,91,0.75);
+		color: $white;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 13px;
+		letter-spacing: 0.046875em;
+		&:hover {
+			background-color: rgba(4,43,91,1);
+    		border-color: #007acc;
+    		color: #007acc;
+		}
+	}
+	.navbar-collapse {
+		box-shadow: none;
+		border: none;
+	}
+	ul.navbar-nav {
+		margin-top: 0;
+		margin-bottom: 0;
+		background-color: $navbg-mobile;
+		li a,
+		.open ul.dropdown-menu>li>a {
+			font-family: $secondary-font;
+			background-color: $navbg-mobile;
+			border-top: 0.5px solid $white;
+			color: $white;
+			text-transform: uppercase;
+			font-size: 13px;
+			&:hover {
+				background-color: $navbg-mobile;
+				color: $third-color;
+			}
+		}
+		li.dropdown.open>a{
+			background-color: $navbg-mobile;
+			color: $third-color;
+		}
+		ul.dropdown-menu {
+			padding-top: 0;
+			padding-bottom: 0;
+			padding-left: 15px;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+
+	.navbar-default {
+		border-radius: 0;
+		border: none;
+		.navbar-toggle, .navbar-toggle:focus {
+
+		}
+		ul.navbar-nav {
+			background-color: $primary-color;
+			// width: 100%;
+			@include flex-navigation;
+			li {
+				@include flex-child;
+			}
+			li a {
+				background-color: $primary-color;
+				font-size: 11px;
+				border-top: none;
+			}
+			ul.dropdown-menu {
+				padding-left: 0;
+			}
+			.open ul.dropdown-menu>li>a {
+				background-color: $primary-color;
+        padding: 10px 20px;
+			}
+		}
+	}
+  .join-top {
+    padding-top: 15px;
+    a.btn-join {
+      padding: 6px 12px;
+      font-size: 12px;
+    }
+  }
+}
+@media (min-width: 992px) {
+  .join-top {
+    a.btn-join {
+      float: right;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .logo-link-top {
+
+  }
+}
