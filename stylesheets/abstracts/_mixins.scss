@@ -32,9 +32,30 @@
   }
 }
 
+/// mixin for border radius
+@mixin radius($value) {
+  border-radius:$value;
+  -webkit-border-radius:$value;
+  -moz-border-radius:$value;
+  -ms-border-radius:$value;
+}
+
+/// mixing for gradient background
+/// we provide start color and end color
+/// this is for search button weird color
+@mixin linear-gradient($initial, $final) {
+  background: $initial;
+  background: -moz-linear-gradient(top,  $initial 0%, $final 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$initial), color-stop(100%,$final)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  $initial 0%,$final 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  $initial 0%,$final 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  $initial 0%,$final 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  $initial 0%,$final 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
 /// flex setup for navigation elements
 /// apply this on sm view(768px and up)
-
 @mixin flex-navigation {
   display: flex;
   padding-left: 0;
@@ -46,7 +67,6 @@
   display: block;
   flex: 1 0 auto;
 }
-
 
 /// mixins for color customization
 @mixin primary-color {

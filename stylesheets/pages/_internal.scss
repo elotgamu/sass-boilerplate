@@ -224,7 +224,8 @@ ol.similar-jobs {
     #jdp-job-description-section {
        margin-top: -25px;
     }
-    #jdp-bottom-apply-section {
+    /// activate this to push bottom apply button to left
+    /**** #jdp-bottom-apply-section {
       height: 136px;
    }
    #jdp-bottom-apply-button-col {
@@ -234,7 +235,7 @@ ol.similar-jobs {
     display: block;
     height: 136px;
     padding-top: 60px;
-   }
+  } ***/
    .similar-jobs-container {
      padding: 50px 0;
    }

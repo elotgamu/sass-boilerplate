@@ -55,6 +55,9 @@
 }
 
 /// custom-helpers
+.full-wd {
+  width: 100%;
+}
 video {
   width: 100%;
 }
@@ -63,4 +66,16 @@ video {
 }
 .bold-text {
   font-weight: bold;
+}
+.bg-white {
+  background: $white;
+}
+.bg-primary {
+  background: $primary-color;
+}
+.bg-secondary {
+  background: $secondary-color;
+}
+.bg-tertiary {
+  background: $tertiary-color;
 }

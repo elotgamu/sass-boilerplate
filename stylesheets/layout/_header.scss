@@ -11,42 +11,22 @@
 .top-navbar {
 
 }
-.table-top-xs {
-
-}
-.logo-link-top {
-	// max-width: 160px;
-	// padding: 12px 0 10px;
-
-	img {
-		width: 100%;
-		max-width: 140px;
-    margin-top: 15px;
-		// padding: 12px 0 10px;
-	}
-}
 
 .navbar-default {
 	background-color: $primary-color;
 	border-color: inherit;
   margin-bottom: 0;
+
+	.navbar-brand {
+		max-width: 200px;
+		img {
+			width: 100%;
+		}
+	}
 	.navbar-toggle, .navbar-toggle:focus {
-		/// @extends .btn-general;
-		float: none;
-		display: inline-block;
-		border-radius: 0;
-		padding: 10px;
-		margin-left: 15px;
-		background-color: rgba(4,43,91,0.75);
-		color: $white;
-		text-transform: uppercase;
-		font-weight: bold;
-		font-size: 13px;
-		letter-spacing: 0.046875em;
+
 		&:hover {
-			background-color: rgba(4,43,91,1);
-    		border-color: #007acc;
-    		color: #007acc;
+
 		}
 	}
 	.navbar-collapse {
@@ -114,7 +94,6 @@
   .join-top {
     padding-top: 15px;
     a.btn-join {
-      padding: 6px 12px;
       font-size: 12px;
     }
   }
