@@ -58,6 +58,10 @@
 .full-wd {
   width: 100%;
 }
+.no-pad {
+  padding-left: 0;
+  padding-right: 0;
+}
 video {
   width: 100%;
 }
@@ -77,5 +81,5 @@ video {
   background: $secondary-color;
 }
 .bg-tertiary {
-  background: $tertiary-color;
+  background: $third-color;
 }

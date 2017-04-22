@@ -1,12 +1,13 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
-.btn-general, .btn-general:focus{
+.btn-general {
   background-color: $btncolor;
   color: $white;
   border: none;
   padding: 6px 15px;
   text-transform: capitalize;
+  text-align: center;
   text-decoration: none;
   border-radius: 0;
   opacity: 1;
@@ -15,9 +16,14 @@
     padding: 6px 15px;
     color: $white;
     text-transform: capitalize;
+    text-align: center;
     text-decoration: none;
     border: none;
+    border-radius: 0;
     opacity: 1;
+  }
+  &:focus {
+    @extend .btn-general;
   }
 }
 

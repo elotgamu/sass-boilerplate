@@ -4,6 +4,7 @@
 ***/
 ///this class could be added to ul tag containing social items
 .social-items {
+  list-style: none;
 
 }
 /// This class could be added to i tags
@@ -16,7 +17,7 @@
   color: $primary-color;
   width: 39px;
   &:hover {
-    color: #fff;
+    color: $white;
     background-color: shade($primary-color, 15%);
     border: 2px solid shade($primary-color, 15%);
   }

@@ -14,7 +14,6 @@
 body {
   background-color: $background-body;
   font-family: $primary-font;
-  // font-weight: 400;
   font-style: normal;
   font-size: 16px;
   color: $text-color;
@@ -34,6 +33,7 @@ h3,
 h4,
 h5 {
   color: $primary-color;
+  text-transform: capitalize;
 }
 
 p {

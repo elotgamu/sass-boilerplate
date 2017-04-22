@@ -30,7 +30,7 @@
 }
 
 
-/// Shamelessly brorrowed from Bourbon
+/// Shamelessly borrowed from Bourbon
 @function tint($color, $percentage) {
   @return mix(white, $color, $percentage);
 }
