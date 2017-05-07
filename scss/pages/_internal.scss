@@ -1,22 +1,45 @@
+// This could be the section for CMS flags
 .cms-pages {
-    background: $white;
-    // padding: 20px 0;
+  background: $white;
+
+  &.first-page {
+    padding-top: 20px;
+  }
+
+  &.last-page {
+    padding-bottom: 20px;
+  }
+
+  .container .container {
+    width: 100%;
+  }
 }
+
 /** internal settings */
 #after-apply-title-container {
   text-align: center;
 }
+
 #after-apply-job-table-header th  {
-  background-color: #fff;
+  background-color: $white;
   color: #0f1643;
 }
+
 #job-results {
   padding: 30px 0;
 }
+
 #subscription-form p {
-    text-align: center;
-   margin-left: 0;
+  text-align: center;
+  margin-left: 0;
 }
+
+// this class is present on JDP and terms and conditions
+.content-card {
+
+}
+
+// use this for 404 & 500
 .error-card {
   margin: 30px 0;
   padding: 30px;
@@ -25,270 +48,399 @@
   text-align: center;
   background-color: #e1e1e1;
 }
-.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
-   background-color: $primary-color;
-   color: $third-color;
+
+// This set the style to ul of city suggesttion for search bar
+.list-group-item.active,
+.list-group-item.active:focus,
+.list-group-item.active:hover {
+  background-color: $primary-color;
+  color: $third-color;
+  border: 0;
 }
+
 /*** JDP **/
 .jdp-title-inner-container {
-background-color: $white;
+  background-color: $white;
+  // padding: 0;
 }
-.jdp-title-container .jdp-job-title, #jdp-title-date-posted {
- color: #3e434b;
+
+.jdp-title-container .jdp-job-title,
+#jdp-title-date-posted {
+  color: #3e434b;
 }
+
 .jdp-title-container .jdp-job-title {
   font-weight: bold;
+  text-transform: none;
 }
-#jdp-not-ready-to-apply-link-top, #jdp-not-ready-to-apply-link-bottom {
-   color: $primary-color;
-   font-weight: bold;
+
+#jdp-not-ready-to-apply-link-top,
+#jdp-not-ready-to-apply-link-bottom {
+  color: $primary-color;
+  font-weight: bold;
 }
+
 .job-details-content {
   border-top: 1px solid #e8eaeb;
- background-color: #fff;
+  background-color: $white;
 }
+
 .content-card-header {
   font-weight: bold;
   text-align: left;
   color: $black;
   text-transform: capitalize;
 }
+
 .jdp-job-snapshot-card.content-card {
-   padding: 15px;
-    border: 2px solid #e8eaeb;
-    border-radius: 6px;
-}
-.jdp-job-snapshot-card.content-card h2.content-card-header {
+  padding: 15px;
+  border: 1px solid #e8eaeb;
+  border-radius: 6px;
+
+  h2.content-card-header {
     margin: -15px;
     padding: 15px;
     background: #e8eaeb;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
     text-transform: capitalize;
+  }
 }
+
 .snapshot-padding {
   padding-top: 15px;
+  margin-top: 15px;
+
+  .secondary-text-color {
+    color: $secondary-color;
+  }
 }
+
 #jdp-breadcrumb-row {
-   padding-top: 20px;
-   ol.breadcrumb {
-       li.bread-crumb-item {
-           a {
-               color: $primary-color;
-           }
-       }
-   }
+
 }
+
+.breadcrumb {
+  background-color: $white;
+  border-radius: 3px;
+  li.bread-crumb-item {
+    a {
+      color: $secondary-color;
+    }
+
+    &:last-child {
+      a {
+        color: $black;
+      }
+    }
+  }
+}
+
 .jdp-job-snapshot-card a {
    font-weight: bold;
    color: $primary-color;
 }
+
 .similar-jobs-container h3 {
     color: $black;
 }
+
 ol.similar-jobs {
-    li {
-        a.similar-jobs-tag {
-            color: $primary-color;
-        }
+  li {
+    a.similar-jobs-tag {
+      color: $primary-color;
     }
+  }
 }
 
 /*** JRP **/
-.pagination>li:first-child>a {
-  border-radius: 50px;
+
+// pagination elements
+// not visible on XS
+.pagination>li {
+  &:first-child>a {
+
+  }
+
+  >a {
+    border-radius: 50px;
+    color: $secondary-color;
+  }
+
+  &:hover>a{
+    background-color: $third-color;
+    color: $white;
+  }
+
+  &.active, &.active:hover {
+    >a {
+      background-color: $third-color;
+      color: $white;
+      border-radius: 50px;
+    }
+  }
 }
-.pagination>li>a {
-  border-radius: 50px;
-  color: $third-color;
-}
-.pagination>li:hover>a {
-  background-color: $third-color;
-  color: #fff;
-}
-.pagination>.active:hover>a {
-  background-color: $third-color;
-  color: #fff;
-}
-.pagination>.active>a {
-  background-color: $third-color;
-  border-radius: 50px;
-  color: #fff;
-}
+
+
+// Envelop icon
 .fa-envelope-o {
-   color: #fff;
+  color: $white;
   border-radius: 50px;
-  background-color: $third-color;
+  background-color: $secondary-color;
   padding: 10px;
   margin-right: 15px;
 }
+
+// text next to sign icon
 #sign-up-widget {
-  color: $third-color;
+  color: $secondary-color;
   font-weight: bold;
 }
+
+// Left column facets
 #jrp-desktop-facet-col {
-  background-color: #fff;
-}
-#jrp-desktop-facet-col #desktop-facets-container {
-  background-color: #fff;
-}
-#jrp-desktop-facet-col #narrow-search-header {
-  width: 100%;
-  background-color: #e8eaeb;
-  text-transform: capitalize;
-  color: #0f1643;
-}
-#jrp-desktop-facet-col #desktop-facets-body {
-  /* background-color: #333; */
-  background-color: inherit;
-}
-#jrp-desktop-facet-col .caret-facet-category-header {
-  background-color: #e8eaeb;
-  color: #0f1643;
-  text-transform: capitalize;
-  width: 100%;
-  font-weight: bold;
-}
-#jrp-desktop-facet-col .caret-facet-item-container {
-  color: #0f1643;
-  background-color: #e8eaeb;
-  border-color: #e8eaeb;
-  font-weight: bold;
-}
- #jrp-desktop-facet-col .view-facet-btn-container {
-   background-color: #e8eaeb;
-   color: #0f1643;
- }
- #jrp-desktop-facet-col .view-facet-btn-container a {
-   color: #0f1643;
-   display: block;
-   text-align: center;
- }
-#jrp-desktop-facet-col .view-facet-btn-container a:before {
-    content: '\f067';
-    font: normal normal normal 14px/1 FontAwesome;
-}
-#job-result-table .job-result td a.job-result-title {
-    color: $primary-color;
-}
-#job-result-table td.job-result-location-cell,  #job-result-table td.job-result-date-posted-cell{
+  background-color: $white;
+
+  // facets main parent
+  #desktop-facets-container {
+    background-color: $white;
+  }
+
+  // narrow search button
+  #narrow-search-header {
+    width: 100%;
+    background-color: #e8eaeb;
+    text-transform: capitalize;
     color: #0f1643;
-}
-#job-result-table .job-result .glyphicon-menu-right {
-    color: $primary-color;
-}
-#job-result-table .job-result:hover {
+  }
 
-   // color: #0093d0;
- }
- #job-result-table .job-result:hover a {
-   // color: #0093d0;
- }
+  // facets body parent
+  #desktop-facets-body {
+    background-color: inherit;
+  }
 
+  // facet header
+  .caret-facet-category-header {
+    background-color: #e8eaeb;
+    color: #0f1643;
+    text-transform: capitalize;
+    width: 100%;
+    font-weight: bold;
+  }
 
-#job-result-table .job-result td a.job-result-title:hover {
-  /* background-color: grey; */
-  // color: #0093d0;
+  // items from facets
+  .caret-facet-item-container {
+    width: 100%;
+    color: #0f1643;
+    background-color: $white;
+    border-color: #e8eaeb;
+    font-weight: bold;
+  }
+
+  // View more button parent
+  .view-facet-btn-container {
+    background-color: #e8eaeb;
+    color: #0f1643;
+
+    // view more button
+    a {
+      color: #0f1643;
+      display: block;
+      text-align: center;
+
+      // This adds a + icons to view more button
+      &::before {
+        content: '\f067';
+        font: normal normal normal 14px/1 FontAwesome;
+      }
+    }
+  }
 }
-.next-mobile-page, .previous-mobile-page {
+
+// Jobs results table
+#job-result-table {
+
+  // each job result
+  .job-result {
+    &:hover {
+      // color: #0093d0;
+      a {
+        // color: #0093d0;
+      }
+    }
+
+    td {
+      a.job-result-title {
+        color: $primary-color;
+
+        &:hover {
+          /* background-color: grey; */
+          // color: #0093d0;
+        }
+      }
+
+      &.job-result-location-cell,
+      &.job-result-date-posted-cell {
+        color: #0f1643;
+      }
+    }
+
+    .glyphicon-menu-right {
+        color: $primary-color;
+    }
+  }
+}
+
+.next-mobile-page,
+.previous-mobile-page {
   background-color: $primary-color;
   color: $white;
+
+  &:hover {
+    background-color: shade($primary-color, 15%);
+    color: $white;
+  }
 }
-.next-mobile-page:hover, .previous-mobile-page:hover {
-  background-color: shade($primary-color, 15%);
-  color: $white;
-}
+
+
 /*** no jobs message **/
 #no-jobs-message {
   padding: 30px 15px;
   text-align: center;
 }
+
 @media (min-width: 768px) {
-    /** JRP **/
-    /*** no jobs message **/
-    #no-jobs-message {
-        padding: 30px 15px;
-        text-align: left;
+  /** JRP **/
+  /*** no jobs message **/
+  #no-jobs-message {
+    padding: 30px 15px;
+    text-align: left;
+  }
+
+  #job-result-table {
+    .job-result-header {
+      background-color: $white;
+
+      a {
+       color: #0f1643;
+       font-weight: bold;
+     }
     }
-    #job-result-table .job-result-header {
-        background-color: #fff;
-    }
-    #job-result-table .job-result-header a {
-        color: #0f1643;
-        font-weight: bold;
-    }
-    /*** END JRP */
+  }
+   /*** END JRP */
 }
+
 @media (min-width: 992px) {
-    /*** JDP **/
-    #jdp-job-description-section {
-       margin-top: -25px;
+  /*** JDP **/
+
+  // this could be removed
+  #jdp-job-description-section {
+   margin-top: -25px;
+  }
+
+  // activate this to push bottom apply button to left
+  // #jdp-bottom-apply-section {
+  //  height: 136px;
+  //}
+
+  //#jdp-bottom-apply-button-col {
+  //  float: left;
+  //  position: absolute;
+  //  bottom: -36px;
+  //  display: block;
+  //  height: 136px;
+  //  padding-top: 60px;
+  //}
+
+  .similar-jobs-container {
+    // padding: 50px 0;
+  }
+
+  /*** JRP **/
+  #jrp-desktop-facet-col {
+
+    // Hidding Narrow button
+    #narrow-search-header {
+      display: none;
     }
-    /// activate this to push bottom apply button to left
-    /**** #jdp-bottom-apply-section {
-      height: 136px;
-   }
-   #jdp-bottom-apply-button-col {
-      float: left;
-    position: absolute;
-    bottom: -36px;
-    display: block;
-    height: 136px;
-    padding-top: 60px;
-  } ***/
-   .similar-jobs-container {
-     padding: 50px 0;
-   }
-   /*** JRP **/
-   #jrp-desktop-facet-col #narrow-search-header {
-    display: none;
+
+    // facets
+    .desktop-facets {
+      border: 1px solid #e8eaeb;
+      border-radius: 6px;
+      margin-bottom: 25px;
+    }
+
+    // title of the facet
+    .caret-facet-category-header {
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+      font-size: 20px;
+    }
+
+    // childs of each facets
+    .caret-facet-item-container {
+      background-color: $white;
+      width: 100%;
+      margin: 0;
+
+      &:hover {
+        background-color: #f7f7f7;
+      }
+
+      // color of the angle-right icon
+      .caret-facet-accent {
+          color: $primary-color;
+      }
+    }
+
+    // view button container
+    .view-facet-btn-container  {
+      width: 100%;
+      margin: 0;
+      background-color: $white;
+      padding-top: 20px;
+
+      // View more button
+      a {
+        color: $primary-color;
+      }
+    }
   }
-  .desktop-facets {
-    border: 2px solid #e8eaeb;
-    border-radius: 6px;
-    margin-bottom: 25px;
-  }
-  #jrp-desktop-facet-col .caret-facet-category-header {
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-  }
-  #jrp-desktop-facet-col .caret-facet-item-container .caret-facet-accent {
-      color: $primary-color;
-  }
-  #jrp-desktop-facet-col .caret-facet-item-container {
-    background-color: #fff;
-    width: 100%;
-    margin: 0;
-  }
-  #jrp-desktop-facet-col .caret-facet-item-container:hover {
-    background-color: #f7f7f7;
-  }
-  #jrp-desktop-facet-col .view-facet-btn-container  {
-    width: 100%;
-    margin: 0;
-    background-color: #fff;
-    padding-top: 20px;
-  }
-  #jrp-desktop-facet-col .view-facet-btn-container a {
-    color: $primary-color;
-  }
+
+  // main title on this page
   .search-results-title.label-text {
     font-weight: bold;
+    text-transform: none;
   }
-   /** END JRP */
-}
-@media (min-width: 1200px) {
-    .cms-pages {
 
+  #job-result-table {
+    .job-result-header {
+      a {
+      display: block;
+      font-size: 20px;
+      padding-bottom: 4px;
+      }
     }
-    /*** JRP **/
-    #job-result-table .job-result-header a {
+  }
+
+  /** END JRP */
+}
+
+@media (min-width: 1200px) {
+  .cms-pages {
+
+  }
+
+  /*** JRP **/
+  #job-result-table .job-result-header a {
     display: block;
     font-size: 20px;
     padding-bottom: 4px;
   }
+
   #jrp-desktop-facet-col .caret-facet-category-header {
     font-size: 20px;
   }
-  /** END JRP **/
+  // /** END JRP **/
 }
