@@ -58,6 +58,15 @@ node_modules/
 # virtual environments
 .env
 
+# html not related
+all-jobs.html
+job-description.html
+jdp.html
+jrp.html
+JDP.html
+JRP.html
+JSR.html
+
 
 staticfiles/
 Contact GitHub API Training Shop Blog About
