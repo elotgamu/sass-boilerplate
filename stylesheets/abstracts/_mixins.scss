@@ -86,3 +86,18 @@
 @mixin secondary-font {
   font-family: $secondary-font;
 }
+
+//mixin for replacing image path
+// thanks to original creator bsilva
+// and thernandez for this mixin
+
+// usage:
+// call to this mixin as backgroundImage("image.png")
+@mixin backgroundImage($addressLocal) {
+  @if $isCMS {
+    background-image: unquote("url(^media_src_" + $addressLocal + "^)");
+  }
+  @else {
+    background-image: unquote("url(../img/" + $addressLocal + ")");
+  }
+}

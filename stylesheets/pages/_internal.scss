@@ -36,7 +36,9 @@
 
 // this class is present on JDP and terms and conditions
 .content-card {
-
+  padding: 1.2em;
+  border: 3px solid $primary-color;
+  background-color: $white;
 }
 
 // use this for 404 & 500
@@ -54,8 +56,21 @@
 .list-group-item.active:focus,
 .list-group-item.active:hover {
   background-color: $primary-color;
-  color: $third-color;
+  color: $white;
   border: 0;
+}
+
+// This is for the google autocomplete icon & text
+// under automplete list on search bar
+ul#suggestion {
+
+  li.autocompletefooter {
+    background-color: $white;
+    display: list-item;
+    float: left;
+    width: 100%;
+    list-style-type: none;
+  }
 }
 
 /*** JDP **/
@@ -111,8 +126,31 @@
   padding-top: 15px;
   margin-top: 15px;
 
+  li {
+    margin-bottom: 15px;
+  }
+
   .secondary-text-color {
     color: $secondary-color;
+  }
+
+  .snapshot-text {
+    padding-left: 20px;
+
+    strong {
+
+    }
+  }
+
+  .snapshot-icon {
+    vertical-align: middle;
+  }
+
+  .job-snapshot-link {
+    @include on-event($self: true) {
+      color: $primary-color;
+      text-decoration: underline;
+    }
   }
 }
 
@@ -133,6 +171,10 @@
         color: $black;
       }
     }
+  }
+
+  >li + li::before {
+    color: $secondary-color;
   }
 }
 
@@ -310,6 +352,10 @@ ol.similar-jobs {
 }
 
 @media (min-width: 768px) {
+  #jdp-apply-section-bottom {
+    text-align: right;
+    float: right;
+  }
   /** JRP **/
   /*** no jobs message **/
   #no-jobs-message {
@@ -321,7 +367,7 @@ ol.similar-jobs {
     .job-result-header {
       background-color: $white;
 
-      a {
+      a, span {
        color: #0f1643;
        font-weight: bold;
      }
@@ -416,7 +462,7 @@ ol.similar-jobs {
 
   #job-result-table {
     .job-result-header {
-      a {
+      a,span {
       display: block;
       font-size: 20px;
       padding-bottom: 4px;
@@ -433,10 +479,14 @@ ol.similar-jobs {
   }
 
   /*** JRP **/
-  #job-result-table .job-result-header a {
-    display: block;
-    font-size: 20px;
-    padding-bottom: 4px;
+  #job-result-table {
+    .job-result-header {
+      a, span {
+        display: block;
+        font-size: 20px;
+        padding-bottom: 4px;
+      }
+    }
   }
 
   #jrp-desktop-facet-col .caret-facet-category-header {

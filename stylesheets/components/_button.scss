@@ -5,30 +5,32 @@
   background-color: $btncolor;
   color: $white;
   border: none;
-  padding: 6px 15px;
+  padding: 7px 15px;
   text-transform: capitalize;
+  font-size: 16px;
   text-align: center;
   text-decoration: none;
   border-radius: 0;
   opacity: 1;
-  &:hover {
-    background-color: shade($secondary-color, 15%);
-    padding: 6px 15px;
+
+  @include on-event {
+    background-color: $btnhover;
+    padding: 7px 15px;
     color: $white;
     text-transform: capitalize;
+    font-size: 16px;
     text-align: center;
     text-decoration: none;
     border: none;
     border-radius: 0;
     opacity: 1;
   }
-  &:focus {
-    @extend .btn-general;
-  }
 }
 
+//cms clases and id's will share button's properties
 .primary-button,
-.btn-join,
+.secondary-button,
+.join-button,
 #edit-preference-update-btn,
 #subscription-save-btn {
   @extend .btn-general;

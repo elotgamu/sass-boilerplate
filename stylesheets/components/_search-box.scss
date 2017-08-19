@@ -2,33 +2,21 @@
 // This file contains all styles of search box and parent items
 // -----------------------------------------------------------------------------
 
-.search-home {
+.search-content {
   h3 {
     color: $primary-color;
     font-weight: bold;
     text-transform: uppercase;
   }
 
-  a.view-search {
+  .view-search {
     display: block;
     text-align: center;
     margin-bottom: 20px;
     color: $white;
   }
 }
-// .search-banner {
-//   h3 {
-//     color: $primary-color;
-//     font-weight: bold;
-//     text-transform: uppercase;
-//   }
-//   a.view-search {
-//     display: block;
-//     text-align: center;
-//     margin-bottom: 20px;
-//     color: $white;
-//   }
-// }
+
 #search-bar {
   width: 100%;
 
@@ -37,7 +25,7 @@
     padding-right: 0;
     padding-bottom: 15px;
 
-    input {
+    input.form-control {
       border-radius: 0;
     }
 
@@ -53,13 +41,11 @@
 /// Internal Search
 .search-toggle-button-mobile {
   border-radius: 0px;
-  color: #fff;
+  color: $primary-color;
   margin-right: 0px;
   width: inherit;
-  margin-top: -30px;
-  margin-right: 125px;
   position: absolute;
-  top: 110px;
+  top: 15px;
   right: 5px;
   z-index: 3;
 }
@@ -70,7 +56,7 @@
 
 }
 @media (min-width: 768px) {
-  .search-home {
+  .search-content {
     width: 100%;
     float: left;
     margin: 0 auto;
@@ -84,25 +70,13 @@
       clear: both;
     }
   }
-  // .search-banner {
-  //   float: left;
-  //   width: 100%;
-  //   /// border: 1px solid red;
-  //   a.view-search {
-  //     text-shadow: 5px 2px 13px rgba(0,0,0, 0.8);
-  //     margin-top: 15px;
-  //     margin-bottom: 0;
-  //     text-align: center;
-  //     clear: both;
-  //   }
-  // }
-  #search-bar {
 
+  #search-bar {
     display: table;
 
     .search-bar-element {
       display: table-cell;
-      width: 50%;
+      width: 40%;
       padding-right: 15px;
       padding-left: 0;
       padding-bottom: 0;
@@ -128,9 +102,8 @@
 }
 @media (min-width:992px) {
 
-  .search-home {
+  .search-content {
     h3 {
-      /// border: 1px solid red;
       margin-bottom: 0;
       text-align: right;
       margin-top: 12%;

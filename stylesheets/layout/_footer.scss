@@ -14,6 +14,35 @@ footer {
 
 }
 
+//this class could be applied to
+// terms and policy
+.legal-list {
+  li {
+    a {
+      color: $white;
+
+      @include on-event {
+        color: $white;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+//navigation elements on footer
+.footer-nav {
+  li {
+    a {
+
+      @include on-event {
+        color: $white;
+        text-decoration: underline;
+      }
+
+    }
+  }
+}
+
 @media (min-width: 768px) {
 
 }

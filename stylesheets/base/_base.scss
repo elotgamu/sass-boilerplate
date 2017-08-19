@@ -20,7 +20,7 @@ h5 {
 }
 
 p {
-  color: $black;
+  color: $text-color;
   word-wrap: break-word;
 }
 
@@ -34,5 +34,6 @@ a {
   @include on-event {
     color: $text-color;
     text-decoration: underline;
+    outline: none;
   }
 }

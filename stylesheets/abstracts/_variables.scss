@@ -3,9 +3,6 @@
 // -----------------------------------------------------------------------------
 
 
-
-
-
 /// Regular font family
 /// @type List
 $text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
@@ -18,7 +15,6 @@ $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
 ///font-variables
 $primary-font: 'Open Sans', sans-serif;
 $secondary-font: 'Montserrat', sans-serif;
-
 
 /// Copy text color
 /// @type Color
@@ -52,33 +48,15 @@ $third-color: #ffcc00;
 $fourth-color: #333;
 $darkblue: #011f3f;
 $btncolor: $secondary-color;
+$btnhover: $primary-color;
 $background-body: $white;
-
-
-/// Container's maximum width
-/// @type Length
-/// $max-width: 1180px !default;
-
-
-
-
-
-/// Breakpoints map
-/// @prop {String} keys - Keys are identifiers mapped to a given length
-/// @prop {Map} values - Values are actual breakpoints expressed in pixels
-//// $breakpoints: (
-///   'small': 320px,
-///   'medium': 768px,
-///   'large': 1024px,
-//// ) !default;
-
-
-
-
-
+$text-color: $black;
 
 /// Relative or absolute URL where all assets are served from
 /// @type String
 /// @example scss - When using a CDN
 ///   $base-url: 'http://cdn.example.com/assets/';
 $base-url: '/assets/' !default;
+
+//var for images replacement
+$isCMS: false;

@@ -39,7 +39,9 @@
   width: 1px;
 }
 
-/// custom-helpers
+/**
+ * custom-helpers
+ */
 .full-wd {
   width: 100%;
 }
@@ -47,15 +49,57 @@
   padding-left: 0;
   padding-right: 0;
 }
+.no-min-height {
+  min-height: 0;
+}
+.no-transform-text {
+  text-transform: none;
+}
+
 video {
   width: 100%;
 }
+
+//position helpers
+.pos-absolute {
+  position: absolute;
+}
+.pos-relative {
+  position: relative;
+}
+.pos-static {
+  position: static;
+}
+
+//text-color
 .text-white {
   color: $white;
 }
-.bold-text {
-  font-weight: bold;
+.text-black-color {
+  color: $black;
 }
+.primary-text-color {
+  color: $primary-color;
+}
+.secondary-text-color {
+  color: $secondary-color;
+}
+
+// font weights
+.normalw-text {
+  font-weight: 400;
+}
+.semibold-text {
+  font-weight: 600;
+}
+.bold-text {
+  font-weight: 700;
+}
+.blackw-text {
+  font-weight: 900;
+}
+
+//backgrounds class
 .bg-white {
   background: $white;
 }
@@ -67,4 +111,7 @@ video {
 }
 .bg-tertiary {
   background: $third-color;
+}
+.bg-tansparent {
+  background-color: transparent;
 }

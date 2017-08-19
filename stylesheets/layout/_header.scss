@@ -2,9 +2,6 @@
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
 
-.top-social {
-
-}
 .top-navbar {
 
 }
@@ -20,48 +17,60 @@
 			width: 100%;
 		}
 	}
-	.navbar-toggle, .navbar-toggle:focus {
+	.navbar-toggle {
+    border-color: $primary-color;
+    background-color: $white;
 
-		&:hover {
+    .icon-bar {
+      background-color: $primary-color;
+      height: 3px;
+    }
 
+		@include on-event {
+      background-color: $primary-color;
+
+      .icon-bar {
+        background-color: $white;
+      }
 		}
 
 	}
+
 	.navbar-collapse {
 		box-shadow: none;
 		border: none;
 	}
+
 	ul.navbar-nav {
 		margin-top: 0;
 		margin-bottom: 0;
 		background-color: $primary-color;
-		li a,
-		.open ul.dropdown-menu>li>a {
-			background-color: $primary-color;
-			color: $white;
-			text-transform: uppercase;
-			font-size: 16px;
-			&:hover {
-				background-color: $secondary-color;
-				color: $white;
-			}
-		}
-		li.active a {
-			background-color: shade($primary-color, 15%);
-			color: $white;
-			&:hover {
-				background-color: $secondary-color;
-				color: $white;
-			}
-		}
-		li.dropdown.open>a{
-			background-color: $primary-color;
-			color: $white;
-		}
-		ul.dropdown-menu {
-			padding-top: 0;
-			padding-bottom: 0;
-		}
+
+    >li {
+      >a {
+        background-color: $primary-color;
+        color: $white;
+        font-size: 16px;
+
+        @include on-event {
+          background-color: $btnhover;
+          color: $white;
+        }
+      }
+
+      &.active {
+        a {
+          background-color: shade($primary-color, 15%);
+          color: $white;
+
+          @include on-event {
+            background-color: $btnhover;
+            color: $white;
+          }
+        }
+      }
+    }
+
 	}
 }
 
@@ -70,18 +79,16 @@
 	.navbar-default {
 		border-radius: 0;
 		border: none;
+
 		ul.navbar-nav {
 			background-color: $primary-color;
 			// width: 100%;
 			@include flex-navigation;
-			li {
+
+			>li {
 				@include flex-child;
 			}
-			li a {
-				background-color: $primary-color;
-				font-size: 11px;
-				border-top: none;
-			}
+
 			ul.dropdown-menu {
 				padding-left: 0;
 			}
@@ -91,22 +98,12 @@
 			}
 		}
 	}
-  .join-top {
-    padding-top: 15px;
-    a.btn-join {
-      font-size: 12px;
-    }
-  }
 }
-@media (min-width: 992px) {
-  .join-top {
-    a.btn-join {
-      float: right;
-    }
-  }
-}
-@media (min-width: 1200px) {
-  .logo-link-top {
 
-  }
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px) {
+
 }
