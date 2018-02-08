@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TN Name- Careers</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- Site specific CSS -->
+    <link rel="stylesheet" href="css/tn-job.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header id="back-to-top">
+
+    </header>
+
+
+    <button id="nav-search-button" type="button" class="navbar-toggle search-nav-icon search-toggle-button-mobile" data-toggle="collapse" data-target="#SearchMobile" aria-expanded="true">
+        <span class="sr-only">Toggle search</span>
+        <i class="fa fa-search"></i> Search
+    </button>
+
+<div id="SearchMobile" class="nav navbar-nav navbar-collapse collapse in" aria-expanded="true">
+    <section class="search-content">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-md-3">
+              <h3>Search Our Jobs:</h3>
+            </div>
+            <div class="col-md-9">
+                <!--#search-bar-->
+                <!-- ^tmp_elements=search_bar^-->
+                <script type="text/javascript">
+                  var disable_autocomplete = false;
+                  var countryDropdownEnabled = false;
+                </script>
+                <script type="text/javascript" src="/public/tn_job/angular/search_bar_controller.js"></script>
+                <div id="search-bar" class="" ng-controller="SearchBarController">
+                    <div class="search-bar-element search-field-container">
+                      <label for="search-keywords-field" class="hidden-xs search-bar-keyword-label label-text">Keyword:</label>
+                      <input id="search-keywords-field" type="text" class="search-bar-keyword-field form-control" ng-model="keywordInput"
+                      ng-keydown="checkKeywordKeydown($event)" placeholder="Job Title or Category">
+                    </div>
+                    <div class="search-bar-element search-field-container search-location-field">
+                      <label for="search-location-field" class="hidden-xs search-bar-location-label label-text">Location:</label>
+                      <input id="search-location-field" autocomplete="off" type="text" class="form-control search-bar-location-field " ng-keydown="checkLocationKeydown($event)"
+                      ng-model="locationInput" ng-change="getSuggestions()" placeholder="City or Postal Code">
+                    </div>
+                    <div class="search-bar-element search-widget-container">
+                        <a href id="primary-search-button" class="search-btn primary-button text-center label-text" ng-click="search()">Search</a>
+                    </div>
+                </div>
+                      <!--/#search-bar-->
+
+                <p class="text-white"><a class="view-search" title="View All Jobs" href="/search">View All Jobs
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a></p>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+  </div>
+
+      <footer>
+
+      </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

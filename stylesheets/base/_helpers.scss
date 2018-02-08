@@ -39,9 +39,26 @@
   width: 1px;
 }
 
+//this will help to identify empty alt attribute on img tags
+// remember that according W3c alt attributes can be empty
+//on decorative only purpose
+//https://www.w3.org/TR/WCAG20-TECHS/H67.html
+
+/*img[alt=""],
+img:not([alt]) {
+  border: 5px dashed #c00;
+}*/
+
 /**
  * custom-helpers
  */
+
+.no-link {
+  display: block;
+  cursor: default;
+  pointer-events: none;
+}
+
 .full-wd {
   width: 100%;
 }
@@ -56,9 +73,6 @@
   text-transform: none;
 }
 
-video {
-  width: 100%;
-}
 
 //position helpers
 .pos-absolute {
@@ -114,4 +128,8 @@ video {
 }
 .bg-tansparent {
   background-color: transparent;
+}
+
+.bg-dark-overlay {
+  background-color: rgba($black, .47);
 }

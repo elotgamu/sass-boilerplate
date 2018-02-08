@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
     <title>TN Name- Careers</title>
 
     <!-- Bootstrap -->
@@ -27,20 +28,23 @@
     </header>
 
 
-    <button id="nav-search-button" type="button" class="navbar-toggle search-nav-icon search-toggle-button-mobile" data-toggle="collapse" data-target="#SearchMobile" aria-expanded="true">
+    <!-- <button id="nav-search-button" type="button" class="navbar-toggle search-nav-icon search-toggle-button-mobile" data-toggle="collapse" data-target="#SearchMobile" aria-expanded="true">
         <span class="sr-only">Toggle search</span>
         <i class="fa fa-search"></i> Search
-    </button>
+    </button> -->
 
-<div id="SearchMobile" class="nav navbar-nav navbar-collapse collapse in" aria-expanded="true">
-    <section class="search-content">
-        <div class="container">
-          <div class="row">
+    <main id="home">
 
-            <div class="col-md-3">
-              <h3>Search Our Jobs:</h3>
-            </div>
-            <div class="col-md-9">
+      <!-- the search section -->
+      <div id="SearchMobile" class="nav navbar-nav navbar-collapse collapse in" aria-expanded="true">
+        <section class="search-content">
+          <div class="container">
+            <div class="row">
+
+              <div class="col-md-3">
+                <h3>Search Our Jobs:</h3>
+              </div>
+              <div class="col-md-9">
                 <!--#search-bar-->
                 <!-- ^tmp_elements=search_bar^-->
                 <script type="text/javascript">
@@ -48,7 +52,7 @@
                   var countryDropdownEnabled = false;
                 </script>
                 <script type="text/javascript" src="/public/tn_job/angular/search_bar_controller.js"></script>
-                <div id="search-bar" class="" ng-controller="SearchBarController">
+                  <div id="search-bar" class="" ng-controller="SearchBarController">
                     <div class="search-bar-element search-field-container">
                       <label for="search-keywords-field" class="hidden-xs search-bar-keyword-label label-text">Keyword:</label>
                       <input id="search-keywords-field" type="text" class="search-bar-keyword-field form-control" ng-model="keywordInput"
@@ -60,29 +64,34 @@
                       ng-model="locationInput" ng-change="getSuggestions()" placeholder="City or Postal Code">
                     </div>
                     <div class="search-bar-element search-widget-container">
-                        <a href id="primary-search-button" class="search-btn primary-button text-center label-text" ng-click="search()">Search</a>
+                      <a href id="primary-search-button" class="search-btn primary-button text-center label-text" ng-click="search()">Search</a>
                     </div>
+                  </div>
+                  <!--/#search-bar-->
+
+                  <p class="text-white">
+                    <a class="view-search" title="View All Jobs" href="/search">View All Jobs <i class="fa fa-angle-right" aria-hidden="true"></i> </a>
+                  </p>
+
+                  </div>
+
                 </div>
-                      <!--/#search-bar-->
-
-                <p class="text-white"><a class="view-search" title="View All Jobs" href="/search">View All Jobs
-                    <i class="fa fa-angle-right" aria-hidden="true"></i>
-                </a></p>
-
-            </div>
-
-          </div>
+              </div>
+            </section>
         </div>
-      </section>
-  </div>
+        <!-- end the search section -->
 
-      <footer>
+    </main>
 
-      </footer>
+    <footer>
+
+    </footer>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <!-- the image replace js -->
+    <script src="js/image-replace.js"></script>
   </body>
 </html>

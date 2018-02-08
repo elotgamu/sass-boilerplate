@@ -30,10 +30,18 @@
 //cms clases and id's will share button's properties
 .primary-button,
 .secondary-button,
+.search-jobs-button-404,
 .join-button,
+#join-button,
 #edit-preference-update-btn,
+#edit-preference-unsubscribe-link,
 #subscription-save-btn {
   @extend .btn-general;
   position: relative;
   display: block;
+}
+
+//the search button
+#primary-search-button {
+
 }

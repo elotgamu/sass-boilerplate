@@ -24,6 +24,7 @@
 
 // 5. Components
 @import
+  'components/banner',
   'components/button',
   'components/social-icons',
   'components/carousel',
@@ -32,8 +33,10 @@
 // 6. Page-specific styles
 @import
   'pages/home',
+  'pages/general_content_pages',
+  'pages/general_fp',
   'pages/internal';
 
 // 7. Themes
-@import
-  'themes/default';
+// @import
+//   'themes/default';

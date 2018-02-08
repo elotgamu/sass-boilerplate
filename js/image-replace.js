@@ -1,18 +1,18 @@
-// This js snippet was provided by a third source thnaks to him
-// for a fast way to replace the image path
-$(document).ready(function(){
-	var isCMS = false;
-	var imageTags = document.getElementsByTagName("img");
+// This script replaces the path for the image sources
 
-	for (var i = imageTags.length - 1; i 〉= 0; i--) {
+$(document).ready(function(){
+	var imageTags = document.getElementsByTagName("img");
+	for (var i = imageTags.length - 1; i >= 0; i--) {
+
 		var source = imageTags[i].src;
+
 		source = source.replace(/^.*[\\\/]/, '');
+
+		source = source.substring(13, source.length - 3);
+
 		var localURL = "img/" + source;
-		var cmsURL = "^media_src_" + source + "^";
-		if (!isCMS) {
-			imageTags[i].src = localURL;
-		} else {
-			imageTags[i].src = cmsURL;
-		}
+
+		imageTags[i].src = localURL;
+
 	}
 });

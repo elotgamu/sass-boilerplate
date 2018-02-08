@@ -1,24 +1,37 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+.prefooter {
+
+}
+
 footer {
 
 }
+
 .footer-top {
 
 }
+
 .footer-middle {
 
 }
+
 .footer-legal {
 
+}
+
+.footer-brand {
+  .footer-logo {
+
+  }
 }
 
 //this class could be applied to
 // terms and policy
 .legal-list {
-  li {
-    a {
+  >li {
+    >a {
       color: $white;
 
       @include on-event {
@@ -31,8 +44,8 @@ footer {
 
 //navigation elements on footer
 .footer-nav {
-  li {
-    a {
+  >li {
+    >a {
 
       @include on-event {
         color: $white;

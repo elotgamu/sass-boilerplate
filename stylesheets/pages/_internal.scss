@@ -1,17 +1,19 @@
 // This could be the section for CMS flags
 .cms-pages {
   background: $white;
-
-  &.first-page {
-    padding-top: 20px;
-  }
-
-  &.last-page {
-    padding-bottom: 20px;
-  }
+  padding: 30px 0 50px 0;
 
   .container .container {
     width: 100%;
+
+    .col-sm-12 {
+      padding: 0;
+    }
+  }
+
+  .jdp-right-column,
+  .jdp-left-column {
+    padding: 0;
   }
 }
 
@@ -32,6 +34,28 @@
 #subscription-form p {
   text-align: center;
   margin-left: 0;
+}
+
+//titles for internal pages
+#edit-preference-title,
+#subscription-title,
+#after-apply-thank-you-header {
+  font-family: $primary-font;
+  font-weight: 300;
+  text-transform: capitalize;
+  color: $black;
+  margin-bottom: 30px;
+}
+
+//legal pages
+.legal-page-background {
+  p, ul {
+
+  }
+
+  h1, h2 {
+
+  }
 }
 
 // this class is present on JDP and terms and conditions
@@ -62,7 +86,7 @@
 
 // This is for the google autocomplete icon & text
 // under automplete list on search bar
-ul#suggestion {
+ul#suggestions {
 
   li.autocompletefooter {
     background-color: $white;
@@ -195,6 +219,22 @@ ol.similar-jobs {
   }
 }
 
+//this makes the mutibrand image and the apply bottom button section to be on the left side
+// #jdp-bottom-apply-company-logo-col,
+// #jdp-bottom-apply-button-col {
+//   display: block;
+//   width: 100%;
+// }
+//
+// .multi-brand-image {
+//   margin-bottom: 3em;
+//
+//   img {
+//     display: block;
+//     margin-left: 0;
+//   }
+// }
+
 /*** JRP **/
 
 // pagination elements
@@ -236,7 +276,8 @@ ol.similar-jobs {
 // text next to sign icon
 #sign-up-widget {
   color: $secondary-color;
-  font-weight: bold;
+  font-weight: 400;
+  text-transform: capitalize;
 }
 
 // Left column facets
@@ -254,6 +295,12 @@ ol.similar-jobs {
     background-color: #e8eaeb;
     text-transform: capitalize;
     color: #0f1643;
+  }
+
+  .desktop-facets {
+    &:last-child {
+      padding-bottom: 0;
+    }
   }
 
   // facets body parent
@@ -277,6 +324,11 @@ ol.similar-jobs {
     background-color: $white;
     border-color: #e8eaeb;
     font-weight: bold;
+
+    .selected-caret-facet-item-container {
+      margin: 0;
+      width: 100%;
+    }
   }
 
   // View more button parent
@@ -304,10 +356,21 @@ ol.similar-jobs {
 
   // each job result
   .job-result {
-    &:hover {
-      // color: #0093d0;
-      a {
-        // color: #0093d0;
+
+    @include on-event {
+      background-color: $primary-color;
+      color: $white;
+
+      td {
+        a.job-result-title {
+            color: $white;
+            // font-family: $internal-fonts;
+        }
+
+        &.job-result-location-cell,
+        &.job-result-date-posted-cell {
+          color: $white;
+        }
       }
     }
 
@@ -335,13 +398,13 @@ ol.similar-jobs {
 
 .next-mobile-page,
 .previous-mobile-page {
-  background-color: $primary-color;
-  color: $white;
-
-  &:hover {
-    background-color: shade($primary-color, 15%);
-    color: $white;
-  }
+  // background-color: $primary-color;
+  // color: $white;
+  //
+  // &:hover {
+  //   background-color: shade($primary-color, 15%);
+  //   color: $white;
+  // }
 }
 
 
@@ -349,6 +412,13 @@ ol.similar-jobs {
 #no-jobs-message {
   padding: 30px 15px;
   text-align: center;
+}
+
+//internal buttons setup
+#edit-preference-update-btn,
+#edit-preference-unsubscribe-link {
+  margin: 0 auto;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -374,14 +444,58 @@ ol.similar-jobs {
     }
   }
    /*** END JRP */
+
+  // internal buttons setup
+  #edit-preference-update-btn,
+  #edit-preference-unsubscribe-link {
+    width: auto;
+  }
+
+  #edit-preference-update-btn {
+    margin-left: 0;
+    float: left;
+  }
+
+  #subscription-save-btn,
+  .search-jobs-button-404 {
+    max-width: 146px;
+    margin: 0 auto;
+  }
+
+  #jdp-apply-button-top,
+  #jdp-apply-button-bottom {
+    max-width: 270px;
+  }
+
+  .search-jobs-button-404 {
+    max-width: 146px;
+    margin: 0 auto;
+  }
+
+  #edit-preference-form .text-center {
+    margin-top: 0;
+    float: right;
+  }
 }
 
 @media (min-width: 992px) {
+  .cms-pages {
+    padding: 50px 0 100px 0;
+
+    .jdp-right-column {
+      padding-left: 15px;
+    }
+
+    .jdp-left-column {
+      padding-right: 15px;
+    }
+  }
+
   /*** JDP **/
 
   // this could be removed
   #jdp-job-description-section {
-   margin-top: -25px;
+   // margin-top: -25px;
   }
 
   // activate this to push bottom apply button to left
@@ -431,7 +545,7 @@ ol.similar-jobs {
       margin: 0;
 
       &:hover {
-        background-color: #f7f7f7;
+        // background-color: #f7f7f7;
       }
 
       // color of the angle-right icon
@@ -445,7 +559,7 @@ ol.similar-jobs {
       width: 100%;
       margin: 0;
       background-color: $white;
-      padding-top: 20px;
+      padding: 10px 0;
 
       // View more button
       a {
@@ -455,8 +569,12 @@ ol.similar-jobs {
   }
 
   // main title on this page
-  .search-results-title.label-text {
-    font-weight: bold;
+  .search-results-title.label-text,
+  .jdp-title-container .jdp-job-title,
+  #edit-preference-title,
+  #subscription-title,
+  #after-apply-thank-you-header {
+    font-weight: 700;
     text-transform: none;
   }
 
@@ -465,7 +583,7 @@ ol.similar-jobs {
       a,span {
       display: block;
       font-size: 20px;
-      padding-bottom: 4px;
+      padding: 2px 0;
       }
     }
   }
@@ -484,13 +602,15 @@ ol.similar-jobs {
       a, span {
         display: block;
         font-size: 20px;
-        padding-bottom: 4px;
+        padding: 2px 0;
       }
     }
   }
 
-  #jrp-desktop-facet-col .caret-facet-category-header {
-    font-size: 20px;
+  #jrp-desktop-facet-col {
+    .caret-facet-category-header {
+      font-size: 20px;
+    }
   }
   // /** END JRP **/
 }

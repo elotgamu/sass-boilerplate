@@ -1,6 +1,18 @@
 // -----------------------------------------------------------------------------
 // This file contains very basic styles.
 // -----------------------------------------------------------------------------
+html {
+  // -webkit-text-size-adjust: 100%;
+  // /* Font varient */
+  // font-variant-ligatures: none;
+  // -webkit-font-variant-ligatures: none;
+  // /* Smoothing */
+  // text-rendering: optimizeLegibility;
+  // -moz-osx-font-smoothing: grayscale;
+  // font-smoothing: antialiased;
+  // -webkit-font-smoothing: antialiased;
+  // text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+}
 
 body {
   background-color: $background-body;
@@ -8,6 +20,10 @@ body {
   font-style: normal;
   font-size: 16px;
   color: $text-color;
+}
+
+main {
+  
 }
 
 h1,
@@ -22,6 +38,10 @@ h5 {
 p {
   color: $text-color;
   word-wrap: break-word;
+
+  &.no-mb {
+    margin-bottom: 0;
+  }
 }
 
 /**
@@ -36,4 +56,8 @@ a {
     text-decoration: underline;
     outline: none;
   }
+}
+
+video {
+  width: 100%;
 }

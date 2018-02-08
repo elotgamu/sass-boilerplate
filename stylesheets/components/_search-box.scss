@@ -1,6 +1,28 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles of search box and parent items
 // -----------------------------------------------------------------------------
+#SearchMobile {
+  background: url('../img/header-turnaround.jpg') top center no-repeat;
+  background-size: contain;
+  margin: 0 auto;
+  overflow: hidden;
+
+  &.in {
+    overflow: visible;
+  }
+}
+
+/// The search icon
+.search-toggle-button-mobile {
+  border-radius: 0px;
+  color: $primary-color;
+  margin-right: 0px;
+  width: inherit;
+  position: absolute;
+  top: 15px;
+  right: 5px;
+  z-index: 3;
+}
 
 .search-content {
   h3 {
@@ -9,11 +31,20 @@
     text-transform: uppercase;
   }
 
-  .view-search {
-    display: block;
+  p {
     text-align: center;
-    margin-bottom: 20px;
+    margin: 10px 0;
+  }
+
+  .view-search {
+    display: inline;
+    text-align: center;
     color: $white;
+
+    @include on-event {
+      color: $white;
+      text-decoration: underline;
+    }
   }
 }
 
@@ -27,6 +58,20 @@
 
     input.form-control {
       border-radius: 0;
+
+      // change the placeholder color
+      &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        // color: #8a8d8f;
+      }
+      &::-moz-placeholder { /* Firefox 19+ */
+        // color: #8a8d8f;
+      }
+      &:-ms-input-placeholder { /* IE 10+ */
+        // color: #8a8d8f;
+      }
+      &:-moz-placeholder { /* Firefox 18- */
+        // color: #8a8d8f;
+      }
     }
 
     &:last-child {
@@ -38,36 +83,30 @@
   }
 }
 
-/// Internal Search
-.search-toggle-button-mobile {
-  border-radius: 0px;
-  color: $primary-color;
-  margin-right: 0px;
-  width: inherit;
-  position: absolute;
-  top: 15px;
-  right: 5px;
-  z-index: 3;
-}
-#SearchMobile {
-  background: url('../img/header-turnaround.jpg') top center no-repeat;
-  background-size: contain;
-  margin: 0 auto;
-
-}
 @media (min-width: 768px) {
+  /// This is a fix for element not using its full space
+  #SearchMobile {
+    float: none;
+    background-size: cover;
+    padding: 0;
+  }
+
   .search-content {
     width: 100%;
     float: left;
     margin: 0 auto;
     padding: 15px 0;
 
-    a.view-search {
-      text-shadow: 5px 2px 13px rgba(0,0,0, 0.8);
+    p {
       margin-top: 15px;
-      margin-bottom: 0;
-      text-align: center;
-      clear: both;
+    }
+
+    a.view-search {
+      // text-shadow: 5px 2px 13px rgba(0,0,0, 0.8);
+      // margin-top: 15px;
+      // margin-bottom: 0;
+      // text-align: center;
+      // clear: both;
     }
   }
 
@@ -90,23 +129,20 @@
       label {
         color: $primary-color;
       }
-    }
-  }
 
-  /// This is a fix for element not using its full space
-  #SearchMobile {
-    float: none;
-    background-size: cover;
-    padding: 0;
+      input.form-control {
+
+      }
+    }
   }
 }
 @media (min-width:992px) {
 
   .search-content {
     h3 {
-      margin-bottom: 0;
-      text-align: right;
-      margin-top: 12%;
+      // margin-bottom: 0;
+      // text-align: right;
+      // margin-top: 12%;
     }
   }
 }
